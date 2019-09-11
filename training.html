@@ -24,9 +24,11 @@
      <!--anchor 닻 특정지점으로 이동하는 기점-->
      <a href="http://www.naver.com" target="_black" ></a>
      <!-- _self(현재페이지에 오픈), _blank(비어있는 새 창에 오픈)-->
+     <!-- 절대주소= 대한민국 서울시 동작구 . file:///c:/kaywon/index.html>> 절대주소. 상대주소는 이동을해도 오류x-->
+     <!--상대주소= 앞 건널목에서 우회전해서 3번째 건물. 단점:위치가 달라지면 주소도 달라짐-->
 
      <!-- 이미지 표시하는 태그 src="주소"-->
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5R8IVJ2jKKwq4fH8fPUmfR3xBDmAvMjn-V9sKsPFMpjhVwz7ERA">
+     <img width="200px" height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5R8IVJ2jKKwq4fH8fPUmfR3xBDmAvMjn-V9sKsPFMpjhVwz7ERA">
      <img src="stupid_cat.jpg" />
      <img src="stupid_cat.jpg" />
      <img src="stupid_cat.jpg" />
@@ -65,6 +67,128 @@
      </ol>
 
      <!--주제 한가지 정한 후 오늘 배운 태그들로 정보 사이트 만들기-->
+
+     <!-- 2019.09.11.3주차-->
+
+     <!-- definition list 정의형 목록-->
+
+    <dl>
+        <dt>
+        <!--타이틀-->
+        unodered list 비 순차적 목록
+        </dt>
+        <dd>
+         <!--서술-->
+         비 순차적 목록은 순서가 없고 위치가 바뀌어도
+         의미가 바뀌지 않는 목록을 의미합니다.
+        </dd>
+        <dt>
+            definition list 정의형 목록
+        </dt>
+        <dd>
+            정의형 목록은 어떤 용어나 단어등을 정의(의미를 명확히)할 때
+            사용합니다.
+        </dd>
+    </dl>
+
+        <!-- strong, em <> b, i-->
+        
+        <strong>강한강조</strong>  <!-- 중요한 글, 강조글-->
+        <em>강조</em> <!--그래도 중요한거다-->
+
+        <b>볼드체</b> <!--의미없음-->
+        <i>이탈릭체</i> <!--의미없음-->
+
+        <!-- ins 첨부, del 삭제 <> u, strike-->
+        <ins>첨부내용</ins> <!-- 추가나 ,부연설명-->
+        <del>삭제내용</del> <!-- 중요한건 아니니 신경쓰지x-->
+        
+        <u>밑줄</u> <!--모양을 나타냄-->
+        <strike>가운데줄</strike> <!--모양을 나타냄-->
+
+        <br />
+
+        <!-- sup 윗첨자, sub 아랫첨자(원래 목적은 글자를 위해 첨부하느냐 아래에 첨부하느냐,,)(ins랑 비슷한 용도)--> 
+        2<sup>2</sup> : 2의 2제곱
+        H<sub>2</sub> : 물의 화학식
+
+        <br />
+
+        <img src="./images/tang.jpg" width="200" /> <!-- width나 height는 같이쓰는거 비추. 한가지만 속성 후 맞춰지게-->
+        <img src="./images/tang.jpg" height="300" />
+    
+        <!--table, tr: 한 줄 ,td: 한 칸-->
+        <style>table, tr, td {border: solid 1px rgb(233, 67, 172);}</style>
+        
+        <!--summary 요약, caption 표제-->
+        <table summary= "표 설명">
+            <caption>[표1]표 제목</caption>
+            <!-- thead: 제목구간, tbody: 내용구간, tfoot:결론구간 (있으면 표를 좀 더 명확하게 알 수 있음)-->
+            <!-- scope 초점, 망원경 : col열, raw행-->
+            <thead>
+            <tr>
+                <th scope="col">제목1</th>
+                <th scope="col">제목2</th>
+                <th scope="col">제목3</th>
+                <th scope="col">제목4</th>
+                <th scope="col">제목5</th>
+                <!-- scope을 명시해줘야 가로줄에대한 제목인지 세로줄에 대한 제목인지 알 수 있다.-->
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <!--cplspan 가로(열)늘이기, rowspan 세로(행)늘이기-->
+                <td colspan="2">1</td>
+                <td rowspan="2">2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            </tbody>
+            <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+        </table>
+
+        <!-- div, span 분할 -->
+        <!-- 의미없이 쓰기 좋은 태그들-->
+        <!-- 블록형 테이블. 대표적으로 dl, ol ul, h1~h6 오른쪽 빈공간이 남아도 밑으로 내려버림 -->
+        <div>내용</div> 
+        <!-- 인라인형 : 공간이 비게 되면 한글자씩 올라가 옆을 다 채운다. 공간이 부족시 밑으로 내려감(줄내림 자동)-->
+        <span>내용</span>
+
+        
+
+        <!--도전과제-->
+        <br />
+
+        <style>
+                table{
+                    border: 1px solid black;
+                }
+                td{
+                    border: 1px solid black;
+                }
+        </style>
+        
+        <table>
+            <tr>
+                <td colspan="3">up</td>
+                <td rowspan="2">right</td>
+            </tr>
+            <tr>
+                <td rowspan="2">left</td>
+                <td colspan="2">center</td>
+            </tr>
+            <tr>
+                <td colspan="3">down</td>
+                
+            </tr>
+        </table>
+            
 
 </body>
 </html>

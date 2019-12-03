@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my_layout</title>
+        <meta charset="UTF-8">
+        <style>
+            /* CSS 작성하는 곳 */
+            body{
+                background-image: url("images/Layout3_back.jpg");
+            }
+            .clear{
+            clear: both; /* 지우다 : 양쪽 */ 
+            height : 0px; /* 높이 : 0px */
+            overflow : hidden; /* 넘쳤을 때 : 숨김 */
+            }
+            .short_line{
+                border-bottom : solid 1px gray; /* border-top 과 bottom 중 한방향 설명 top, bottom 둘중 상관 x*/
+                width: 30px;
+                margin: 10px 0px; /* 상하 좌우 */
+            }
+            .long_line{
+                border-bottom : solid 1px gray; /* border-top 과 bottom 중 한방향 설명 top, bottom 둘중 상관 x*/
+                width: 90px;
+                margin: 10px 0px; /* 상하 좌우 */
+            }
+            header ul{
+                padding: 0px;
+            }
+            header li{
+                float: left;
+                list-style: none;
+                padding: 0px 20px 0px 0px; /* 상 우 하 좌*/
+            }
+            .clear{
+            clear: both; /* 지우다 : 양쪽 */ 
+            height : 0px; /* 높이 : 0px */
+            overflow : hidden; /* 넘쳤을 때 : 숨김 */
+            }
+            .category{
+                background-color: black;
+                color: white;
+                /* width : 150px; -> 고정값은 극적인 한 경우에만 적용 */
+                display: inline-block; 
+                padding : 5px 8px; /* margin은 외부여백 padding은 내부여백*/
+                position: static; /* 위치 : 정적인 */
+                position: absolute; /* 위치 : 절대적인 _남에게 밀리지 않고, 자신의 위치를 지킴 */
+                
+                bottom : 0px;
+                left : 0px;
+            }
+            .visual{
+                position: relative; /* 위치 : 관계형 - 자식(.category)이 absolute일 경우 relative인 부모(.visual)가 위치 설정의 기준이 됨 */
+            }
+            .visual img{
+                /* display : inline; /*줄글처럼 표시되는 것이 일반적인 표시방식 : 인라인형 -> 글자로 취급되듯이 사이에 공간이 생김*/
+                display : block; /* 글씨를 포함하지 않기 때문에 소문자의 아래 여백이 필요하지 않음 표시방식 : 블록형*/
+            }
+            #content ul{
+                padding: 0px;
+            }
+            .card{
+                background-color: white;
+                border-right: solid 1px gray;
+                border-bottom: solid 1px gray;
+
+                width: 310px;
+                list-style: none;
+                float: left;
+                margin: 15px;
+            }
+            .info{
+                padding : 20px;
+            }
+            .info dl{
+                margin: 0px;
+            }
+            .info dd{
+                margin: 0px; /* 상속 안됨 */
+                font-size: 9px; /* 상속 */
+            }
+            .info dt{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="final_index.html">back</a>
+        <div id="wrap">
+            <header>
+                <h1>Gridly</h1>
+                <div class="short_line"></div> <!--의미가 없는 태그 = div 사용-->
+                <nav>
+                    <ul>
+                        <li>home</li>
+                        <li>digital designs</li>
+                        <li>web designs</li>
+                        <li>branding/identity</li>
+                        <li>about me </li>
+                        <li>contact</li>
+                        <div class="clear"></div><!-- float left 해제  -->
+                    </ul>
+               </nav> 
+               <div class="short_line"></div>  
+            </header>
+            <div id="content">
+                <ul>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/tyler_1.jpg" />
+                            <div class="category">tyler the creator</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                        아티스트 크루 PLASTIC CASTLE에서 전시했던 MUSE의 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/tyler_2.jpg" />
+                            <div class="category">tyler the creator</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                            아티스트 크루 PLASTIC CASTLE에서 전시했던 MUSE의 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/tyler_3.jpg" />
+                            <div class="category">tyler the creator</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                            아티스트 크루 PLASTIC CASTLE에서 전시했던 MUSE의 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/tyler_4.jpg" />
+                            <div class="category">tyler the creator</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                            아티스트 크루 PLASTIC CASTLE에서 전시했던 MUSE의 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/tyler_5.jpg" />
+                            <div class="category">tyler the creator</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                            아티스트 크루 PLASTIC CASTLE에서 전시했던 MUSE의 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/drake.jpg" />
+                            <div class="category">drake</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>procreate</dt>
+                                <dd>
+                                    <div>2019.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                       좋아하는 가수 Drake의 디지털드로잉 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/iron_man.jpg" />
+                            <div class="category">Photoshop design</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>procreate</dt>
+                                <dd>
+                                    <div>2019.08</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                        어벤져스 엔드게임에서 나온 아이언맨의 명대사가 감명깊어 작업한 디지털드로잉이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/leo.jpg" />
+                            <div class="category">Leo</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>procreate</dt>
+                                <dd>
+                                    <div>2019.07</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                       좋아하는 배우 레오나르도 디카프리오를 그린 작업물이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/samsmith_팬아트공모.jpg" />
+                            <div class="category">sam smith</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe photoshop</dt>
+                                <dd>
+                                    <div>2018.11</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                       2018 현대카드 슈퍼콘서트 샘스미스 팬아트 공모전에 제출한 디지털드로잉이다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/과제9_21761064_신지원.1.jpg" />
+                            <div class="category">cat allergy</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Adobe illustrator</dt>
+                                <dd>
+                                    <div>2018.05</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                       2학년 1학기의 비주얼커뮤니케이션수업시간에 작업했던 포스터.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="artwork/call_me.jpg" />
+                            <div class="category">Call me</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>procreate</dt>
+                                <dd>
+                                    <div>2019.09</div>
+                                    <div class="long_line"></div> 
+                                    <p>
+                                        헤어진 남자친구의 연락을 기다리는걸 표현한 일러스트다.
+                                    </p>
+                                    <div class="long_line"></div>
+                                    <div>Reda On →</div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <div class="clear"></div><!-- float left 해제 < 집나간 li를 위해 -->
+                </ul>
+            </div>
+           <footer>
+               <div class="short_line"></div>
+               <img src="images/layout3_icon1.png">
+               <img src="images/layout3_icon2.png">
+               <img src="images/layout3_icon3.png">
+               <img src="images/layout3_icon4.png">
+               <div class="short_line"></div>
+               <div>This website & the Internet Ends hereg</div>
+               <div>Copyright 2011 Showcase Design www.BlazRobar.com</div>
+           </footer>
+        </div>
+        
+    </body>
+</html>
